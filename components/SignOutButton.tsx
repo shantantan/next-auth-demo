@@ -1,7 +1,6 @@
 "use client";
 
 import { signOutAction } from "@/lib/actions/auth";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -10,12 +9,12 @@ interface Props {
 
 export const SignOutButton = ({ className }: Props) => {
   return (
-    <Button
+    <button
       onClick={() => signOutAction()}
       type="button"
-      className={cn(className)}
+      className={cn("hover:underline", className)}
     >
-      <span className="pb-[.1em]">ログアウト</span>
-    </Button>
+      signOut
+    </button>
   );
 };
